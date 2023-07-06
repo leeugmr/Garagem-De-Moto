@@ -85,7 +85,7 @@ public class GaragemMotos {
 
         entradaInvalida = true;
         do {
-            System.out.println("Insira o valor da moto: ");
+            System.out.println("Insira o valor da moto (Obs: Formato deve ser 1000.00): ");
             matriz[linha - 1][6] = validarValor(scanner.nextLine());
             if (matriz[linha - 1][6].isEmpty()) {
                 System.out.println("Valor inválido. Insira novamente.");
@@ -180,7 +180,7 @@ public class GaragemMotos {
     public static String validarValor(String valor) {
         String padrao = "^[0-9]+(\\.[0-9]+)?$";
         if (!valor.matches(padrao)) {
-            System.out.println("Valor inválido. Apenas números positivos são permitidos.");
+            System.out.println("Valor inválido. Apenas números positivos são permitidos. ");
             return "";
         }
         return valor;
